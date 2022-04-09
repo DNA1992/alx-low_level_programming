@@ -14,10 +14,10 @@ int main(void)
 	for (lowerCase = 'a'; lowerCase <= 'z'; lowerCase++)
 		putchar(lowerCase);
 
-	for (upperCase = 'A' upperCase <= 'Z'; upperCase++)
+	for (upperCase = 'A'; upperCase <= 'Z'; upperCase++)
 		putchar(upperCase);
 
-		printf("\n");
+	putchar('\n');
 
 	return (0);
 }
