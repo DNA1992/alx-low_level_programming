@@ -30,7 +30,7 @@ int main(void)
 				
 						if (digit1 == 9 && digit2 == 8 && digit3 == 9 && digit4 == 9)
 						{	
-							continue
+							continue;
 						}					
 
 						else
