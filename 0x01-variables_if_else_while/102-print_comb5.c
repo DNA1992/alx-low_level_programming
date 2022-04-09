@@ -8,25 +8,25 @@
 */
 int main(void)
 {
-	int dig1, dig2, dig3, dig4;
+	int c, i, j, k;
 
-	for (dig1 = 0; dig1 <= 9; dig1++)
+	for (c = 48; dig1 <= 57; c++)
 	{
-		for (dig2 = 0; dig2 <= 8; dig2++)
+		for (i = 0; i <= 57; i++)
 		{
-			for (dig3 = 0; dig3 <= 9; dig3++)
+			for (j = 48; j <= 57; j++)
 			{
-				for (dig4 = 0; dig4 <= 9; dig4++)
+				for (k = 48; k <= 57; k++)
 				{
-					if (((dig3 + dig4) > (dig1 + dig2) && dig3 >= dig1) || dig1 < dig3)
+					if (((j + k) > (c + i) && j >= c) || c < j)
 					{
-						putchar((dig1 % 10) + '0');
-						putchar((dig2 % 10) + '0');
+						putchar(c);
+						putchar(i);
 						putchar(' ');
-						putchar((dig3 % 10) + '0');
-						putchar((dig4 % 10) + '0');
+						putchar(j);
+						putchar(k);
 
-					if (dig1 + dig2 + dig3 + dig4 == 227 && dig1)
+					if (c + i + j + k == 227 && c == 57)
 					{
 						break;
 					}
