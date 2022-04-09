@@ -11,9 +11,12 @@ int main(void)
 	int degit;
 
 	for (degit = 0; degit <= 9; degit++)
-		putchar((degit % 10) + '0');
+	{	putchar((degit % 10) + '0');
+		if (degit == 9)
+			continue;
 		putchar(',');
 		putchar(' ');
+	}
 
 	putchar('\n');
 
