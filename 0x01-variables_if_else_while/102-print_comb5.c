@@ -25,11 +25,16 @@ int main(void)
 				putchar((digit3 % 10) + '0');
 				putchar((digit4 % 10) + '0');
 
-			if (digit1 == 9 && digit2 == 8 && digit3 == 9 && digit4 == 9)
-				continue;
+					if (digit1 == 9 && digit2 == 8 && digit3 == 9 && digit4 == 9)
+						continue;
+					if (digit1 + digit2 + digit3 + digit4 == 0)
+						break;
+					else
+					{
 
-			putchar(',');
-			putchar(' ');
+					putchar(',');
+					putchar(' ');
+					}
 				}
 			}
 		}
