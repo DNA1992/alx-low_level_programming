@@ -1,10 +1,8 @@
 #include<stdlib.h>
 #include<stdio.h>
 #include<time.h>
-/*
-* main - prints all possible combinations of two digits.
-* main - prints only the smallest combination.
-* main - numbers are separated by comma and space
+/**
+* main - prints all possible combinations of two digits in ascending order sepa
 *
 * Return: Always 0 (Success)
 */
