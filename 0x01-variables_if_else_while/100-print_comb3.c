@@ -2,7 +2,9 @@
 #include<stdio.h>
 #include<time.h>
 /*
-* main - prints all possible combinations of two digits,by comma and space.
+* main - prints all possible combinations of two digits.
+* main - prints only the smallest combination.
+* main - numbers are separated by comma and space
 *
 * Return: Always 0 (Success)
 */
