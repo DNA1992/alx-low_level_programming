@@ -2,9 +2,9 @@
 #include<stdio.h>
 #include<time.h>
 /*
-* main - print combination of two digits
+* main - prints all possible combinations of two digits,by comma and space.
 *
-*Return: Always 0 (Success)
+* Return: Always 0 (Success)
 */
 int main(void)
 {
