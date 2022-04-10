@@ -20,6 +20,7 @@ int main(void)
 			putchar((dig2 / 10) + '0');
 			putchar((dig2 % 10) + '0');
 			putchar(',');
+			putchar(' ');
 
 			if (dig1 == 98 && dig2 == 99)
 			{
