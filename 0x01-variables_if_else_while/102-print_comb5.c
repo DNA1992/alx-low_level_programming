@@ -8,36 +8,22 @@
 */
 int main(void)
 {
-	int c, i, j, k;
+	int dig1, dig2;
 
-	for (c = 48; c <= 57; c++)
+	for (dig1 = 0; dig1 <= 98; dig1++)
 	{
-		for (i = 0; i <= 57; i++)
+		for (dig2 = dig1 + 1; dig2 <= 99; dig2++)
 		{
-			for (j = 48; j <= 57; j++)
+			putchar((dig1 / 10) + '0');
+			putchar((dig1 % 10) + '0');
+			putchar(' ');
+			putchar((dig2 / 10) + '0');
+			putchar((dig2 % 10) + '0');
+			putchar(',');
+
+			if (dig1 == 98 && dig2 == 99)
 			{
-				for (k = 48; k <= 57; k++)
-				{
-					if (((j + k) > (c + i) && j >= c) || c < j)
-					{
-						putchar(c);
-						putchar(i);
-						putchar(' ');
-						putchar(j);
-						putchar(k);
-
-					if (c + i + j + k == 227 && c == 57)
-					{
-						break;
-					}
-
-					else
-					{
-						putchar(',');
-						putchar(' ');
-					}
-					}
-				}
+				continue;
 			}
 		}
 	}
