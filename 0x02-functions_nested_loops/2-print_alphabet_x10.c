@@ -6,13 +6,14 @@
 */
 void print_alphabet_x10(void)
 {
-	char i;
-	char c;
+	int n;
+	int c;
 
-	i = 48;
+
+	i = 0;
 	c = 'a';
 
-	while (i < 57)
+	while (i < 10)
 	{
 		while (c <= 'z')
 		{
@@ -20,6 +21,6 @@ void print_alphabet_x10(void)
 			c++;
 		}
 		i++;
-		_putchar('\n');
 	}
+	_putchar('\n');
 }
