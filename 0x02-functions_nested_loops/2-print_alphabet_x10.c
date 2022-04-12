@@ -6,13 +6,13 @@
 */
 void print_alphabet_x10(void)
 {
-	int i;
+	char i;
 	char c;
 
-	i = 0;
+	i = 48;
 	c = 'a';
 
-	while (i < 10)
+	while (i < 57)
 	{
 		while (c <= 'z')
 		{
