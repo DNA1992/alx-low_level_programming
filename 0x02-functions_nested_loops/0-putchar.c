@@ -1,5 +1,3 @@
-#include<stdlib.h>
-#include<stdio.h>
 #include"main.h"
 /**
 * main - prints _putchar followed by new line
@@ -8,13 +6,13 @@
 */
 int main(void)
 {
-	char d[] = "_putchar";
+	char c[] = "_putchar";
 	int i;
 
 	i = 0;
 	while (i < 8)
 	{
-		_putchar(d[i]);
+		_putchar(c[i]);
 		i++;
 	}
 	_putchar('\n');
