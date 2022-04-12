@@ -1,8 +1,7 @@
-#include<stdlib.h>
 #include<stdio.h>
-#include"main.h"
+#include<stdlib.h>
 /**
-* main - prints _putchar followed by new line
+* main - prints _putchar
 *
 * Return: Always (0) Success
 */
@@ -10,9 +9,9 @@ int main(void)
 {
 	char d[] = "_putchar";
 	int i;
-
+	
 	i = 0;
-	while (i < 8)
+	while (i < 7)
 	{
 		_putchar(d[i]);
 		i++;
@@ -21,3 +20,4 @@ int main(void)
 
 	return (0);
 }
+
