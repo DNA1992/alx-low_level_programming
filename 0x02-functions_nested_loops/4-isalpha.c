@@ -1,4 +1,4 @@
-#include"main.h"
+#include "main.h"
 /**
 * _isalpha - Return 1 checks alphabetic character whether upper or lower case
 * @c: compared values
