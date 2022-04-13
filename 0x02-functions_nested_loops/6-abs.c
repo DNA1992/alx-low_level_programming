@@ -4,7 +4,7 @@
 * @int: the input integer
 * Return: Absolute value of n
 */
-int _abs(int n)
+int _abs(int)
 {
 	return (n * ((n > 0) - (n < 0)));
 }
