@@ -5,7 +5,7 @@
 * 0 if zero
 * -1 if negative
 */
-int print_sign(int n);
+int print_sign(int n)
 {
 	int n;
 
