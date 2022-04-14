@@ -1,10 +1,9 @@
 #include "main.h"
-
 /**
 * print_numbers - entry point
 *
 * Description: prints number with _putchar
-*@number: input character
+*
 * Return: void
 */
 void print_numbers(void)
