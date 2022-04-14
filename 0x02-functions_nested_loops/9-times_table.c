@@ -33,7 +33,6 @@ void times_table(void)
 						_putchar(' ');
 					}
 				}
-			}
 			else
 			{
 				_putchar((z / 10) + '0');
