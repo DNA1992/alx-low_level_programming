@@ -1,7 +1,7 @@
 #include "main.h"
 /**
 * print_most_numbers - print other numbers aside 2 and 4
-*@numbers: return type
+* Description: return type
 * Return: Always 0
 */
 void print_most_numbers(void)
