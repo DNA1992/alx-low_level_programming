@@ -3,7 +3,7 @@
 * puts2 - prints other characters of a string starting from first
 * @str: string to  use
 */
-void puts2(char *str);
+void puts2(char *str)
 {
 	int i;
 
