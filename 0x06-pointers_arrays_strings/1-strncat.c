@@ -4,6 +4,7 @@
 * _strncat - concatinate 2 strings.
 *@dest: first string.
 *@src: second string.
+*@n: number of bytes
 * Return: Always 0.
 */
 
