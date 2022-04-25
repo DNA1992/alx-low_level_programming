@@ -6,10 +6,10 @@
 *Return: the string s encoded to rot13
 */
 
-char *rot13(char *)
+char *rot13(char *s)
 {
 	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
-	char s_rot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
+	char stringRot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int x, y;
 	
 	for (x = 0; s[x] != '\0'; x++)
@@ -18,7 +18,7 @@ char *rot13(char *)
 		{
 			if (s[x] == letters[y])
 			{
-				s[x] = s_rot13[y];
+				s[x] = stringRot13[y];
 				break;
 			}
 		}
