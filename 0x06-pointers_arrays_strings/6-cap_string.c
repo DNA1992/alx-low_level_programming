@@ -6,7 +6,7 @@
 *
 * Return: string
 */
-char *cap_string(char *a);
+char *cap_string(char *a)
 {
 	char separator[] = " \t\n,;.!?\"(){}";
 	int x, y;
@@ -16,19 +16,16 @@ char *cap_string(char *a);
 		if (a[x] >= 'a' && a[x] <= 'z')
 		{
 			if (x == 0)
-			{
 				a[x] -= 32;
-			}
-		else
-		{
-			for (y = 0; separator[y] != '\0'; y++)
+
+			else
 			{
-				if (a[x - 1] == separator[y])
+				for (y = 0; separator[y] != '\0'; y++)
 				{
-					a[x] -= 32;
+					if(a[x - 1] == separator[y])
+						a[x] -= 32;
 				}
 			}
-		}
 
 		}
 	}
