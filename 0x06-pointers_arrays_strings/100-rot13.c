@@ -11,7 +11,7 @@ char *rot13(char *s)
 	char letters[] = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz";
 	char stringRot13[] = "NOPQRSTUVWXYZABCDEFGHIJKLMnopqrstuvwxyzabcdefghijklm";
 	int x, y;
-	
+
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		for (y = 0; letters[y] != '\0'; y++)
