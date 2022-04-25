@@ -22,7 +22,7 @@ char *cap_string(char *a)
 			{
 				for (y = 0; separator[y] != '\0'; y++)
 				{
-					if(a[x - 1] == separator[y])
+					if (a[x - 1] == separator[y])
 						a[x] -= 32;
 				}
 			}
