@@ -6,7 +6,7 @@
 * Return: Converted string
 */
 
-char *string_toupper(char *)
+char *string_toupper(char *s)
 {
 	for (int x = 0; s[x] != '\0'; x++)
 	{
