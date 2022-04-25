@@ -2,8 +2,8 @@
 
 /**
 * reverse_array - reverses an array of number
-*@a: array 
-*@n: number
+*@a:array
+*@n:number
 */
 
 void reverse_array(int *a, int n)
