@@ -1,15 +1,15 @@
 #include "main.h"
 
 /**
-* _strcat - function to concatnate two strings
-*@dest: pointer for firs string
-*@src: pointer for second string
+* _strcat - concatinate two strings
+*@dest:first string
+*@src: second string
 * Return: string
 */
 
 char *_strcat(char *dest, char *src)
 {
-	int x,y;
+	int x, y;
 
 	x = 0;
 	while (dest[x] != '\0')
