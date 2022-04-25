@@ -11,7 +11,7 @@ char *cap_string(char *a);
 	char separator[] = " \t\n,;.!?\"(){}";
 	int x, y;
 
-	for (x = 0; a[x] != '\0')
+	for (x = 0; a[x] != '\0'; x++)
 	{
 		if (a[x] >= 'a' && a[x] <= 'z')
 		{
