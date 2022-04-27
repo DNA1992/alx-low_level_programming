@@ -13,12 +13,10 @@ unsigned int _strspn(char *s, char *accept)
 
 	while (accept[len1] != '\0')
 		len1++;
-
 	for (x = 0; s[x] != '\0'; x++)
 		for (y = 0; y < len1; y++)
 			if (s[x] == accept[y])
 				len2++, y = len1;
-
 			else
 				if (y == len1 - 1)
 					goto exit;
