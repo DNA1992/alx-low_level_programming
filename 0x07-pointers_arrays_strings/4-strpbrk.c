@@ -1,9 +1,9 @@
 #include "main.h"
 
 /**
-* _strpbrk- locates a character in a string
-* @s:is a pointer type char
-* @accept: pointer type char
+*_strpbrk- locates a character in a string
+*@s:is a pointer type char
+*@accept: pointer type char
 * Return: number of bytes
 */
 
