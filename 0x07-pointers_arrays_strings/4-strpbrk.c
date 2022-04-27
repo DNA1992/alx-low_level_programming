@@ -12,12 +12,15 @@ char *_strpbrk(char *s, char *accept)
 	int x, y, z;
 	z = 0;
 
+
 	for (x = 0; s[x] != '\0'; x++)
 	{
 		for (y = 0; s[y] != '\0'; y++)
 		{
 			if (s[x] != accept[y])
+			{
 				continue;
+			}
 
 			else
 			{
@@ -28,7 +31,9 @@ char *_strpbrk(char *s, char *accept)
 		}
 
 		if (z != 0)
+		{
 			return (s + x);
+		}
 
 	}
 	return (0);
