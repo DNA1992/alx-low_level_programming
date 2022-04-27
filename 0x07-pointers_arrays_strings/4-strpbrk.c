@@ -14,21 +14,23 @@ char *_strpbrk(char *s, char *accept)
 
 	for (x = 0; s[x] != '\0'; x++)
 	{
-		for (y = 0; s[y] != '\0'; y++)
+		for (y = 0; accept[y] != '\0'; y++)
 		{
 			if (s[x] != accept[y])
 				continue;
 
 			else
+			{
 				z++;
 				break;
+			}
 
 		}
 
 		if (z != 0)
 			return (s + x);
-		}
 
 	}
+
 	return (0);
 }
