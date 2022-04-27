@@ -9,8 +9,7 @@
 
 char *_strpbrk(char *s, char *accept)
 {
-	int x, y, z;
-	z = 0;
+	int x, y, z = 0;
 
 
 	for (x = 0; s[x] != '\0'; x++)
@@ -18,20 +17,15 @@ char *_strpbrk(char *s, char *accept)
 		for (y = 0; s[y] != '\0'; y++)
 		{
 			if (s[x] != accept[y])
-			{
 				continue;
-			}
 
 			else
-			{
 				z++;
 				break;
-			}
 
 		}
 
 		if (z != 0)
-		{
 			return (s + x);
 		}
 
