@@ -11,9 +11,8 @@ unsigned int _strspn(char *s, char *accept)
 {
 	unsigned int x, y, sublength, length;
 
-	for (sublength = 0; sublength != '\0'; sublength++)
-	{
-	}
+	for (sublength = 0; accept[sublength] != '\0'; sublength++)
+	;
 
 	for (x = 0; s[x] != '\0'; x++)
 		for (y = 0; y < sublength; y++)
