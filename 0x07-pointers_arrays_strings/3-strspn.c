@@ -28,10 +28,11 @@ unsigned int _strspn(char *s, char *accept)
 		for (j = 0; accept[j] != '\0'; j++)
 			if (num != 0 && s[i + 1] != accept[j])
 				cont++;
-
-			if (cont == j)
-				break;
-				cont = 0;
+		
+		if (cont == j)
+			break;
+			
+		cont = 0;
 	}
 	return (num);
 }
