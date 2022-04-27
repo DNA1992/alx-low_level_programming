@@ -9,11 +9,10 @@
 
 char *_strchr(char *s, char c)
 {
-	int x;
+	unsigned int x;
 
 	for (x = 0; s[x] != c && s[x] != '\0'; x++)
-	{
-		;
+	;
 
 		if (s[x] != c)
 		{
@@ -23,6 +22,7 @@ char *_strchr(char *s, char c)
 		{
 			s += x;
 		}
-	}
+
+
 	return (s);
 }
