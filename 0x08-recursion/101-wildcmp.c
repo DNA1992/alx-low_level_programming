@@ -5,7 +5,7 @@
 *@s1:string one
 *@s2:string two
 *Return: 1 for success
-*error -1 
+*error -1
 */
 
 int wildcmp(char *s1, char *s2)
