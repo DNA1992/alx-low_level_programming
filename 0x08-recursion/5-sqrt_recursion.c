@@ -15,6 +15,7 @@ int srt(int x, int y)
 
 	if (y * y > x)
 		return (-1);
+	
 	return (srt(x, y + 1));
 }
 
@@ -25,7 +26,7 @@ int srt(int x, int y)
 *error -1  for error
 */
 
-int _srt_recursion(int n)
+int _sqrt_recursion(int n)
 {
 	return (srt(n, 1));
 }
