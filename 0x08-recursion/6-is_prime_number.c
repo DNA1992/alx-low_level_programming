@@ -18,7 +18,7 @@ int primeNum(int x, int y)
 }
 
 /**
-*_is_prime_number - checks prime number
+* is_prime_number - checks prime number
 *@n:natural number
 * Return: 1 success
 * error -1
