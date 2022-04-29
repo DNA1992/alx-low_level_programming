@@ -12,6 +12,7 @@ int palindrom1(char *x, int y)
 {
 	if (*x == 0)
 		return (y - 1);
+	
 	return (palindrom1(x + 1, y + 1));
 }
 
@@ -27,8 +28,10 @@ int palindrom2(char *x, int y)
 {
 	if (*x != *(x + 1))
 		return (0);
+	
 	else if (*x == 0)
 		return (1);
+	
 	return (palindrom2(x + 1, y - 2));
 }
 
