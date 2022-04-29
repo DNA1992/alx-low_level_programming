@@ -12,7 +12,7 @@ int palindrom1(char *x, int y)
 {
 	if (*x == 0)
 		return (y - 1);
-	return (palindrom1(a + 1, y + 1));
+	return (palindrom1(x + 1, y + 1));
 }
 
 /**
