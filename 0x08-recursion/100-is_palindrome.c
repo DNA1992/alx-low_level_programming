@@ -26,7 +26,7 @@ int palindrom1(char *x, int y)
 
 int palindrom2(char *x, int y)
 {
-	if (*x != *(x + 1))
+	if (*x != *(x + y))
 		return (0);
 	
 	else if (*x == 0)
