@@ -1,21 +1,21 @@
 #include "main.h"
 
 /**
-*sqrt - evaluates square root of numbers
+*srt - evaluates square root of numbers
 *@x: same value as n
 *@y: number that iterates from 1 to n
 *Return: 1 on success
 *error print -1
 */
 
-int sqrt(int x, int y)
+int srt(int x, int y)
 {
 	if (y * y == x)
 		return (y);
 
 	if (y * y > x)
 		return (-1);
-	return (sqrt(x, y + 1));
+	return (srt(x, y + 1));
 }
 
 /**
@@ -25,8 +25,8 @@ int sqrt(int x, int y)
 *error -1  for error
 */
 
-int _sqrt_recursion(int n)
+int _srt_recursion(int n)
 {
-	return (sqrt(n, 1));
+	return (srt(n, 1));
 }
 
