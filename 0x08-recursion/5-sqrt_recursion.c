@@ -15,7 +15,7 @@ int srt(int x, int y)
 
 	if (y * y > x)
 		return (-1);
-	
+
 	return (srt(x, y + 1));
 }
 
