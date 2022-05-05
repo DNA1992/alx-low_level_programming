@@ -3,9 +3,6 @@
 #include <stdio.h>
 
 /**
-<<<<<<< HEAD
-*
-=======
 * alloc_grid - returns pointer to 2 D array of numbers
 *@width:the width of the matrix
 *@height:the height of the matrix
@@ -47,5 +44,3 @@ int **alloc_grid(int width, int height)
 	}
 	return (s);
 }
-
->>>>>>> 9b9cc856b5bd832de4289223ab74c6321f58747f
