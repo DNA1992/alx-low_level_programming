@@ -6,6 +6,7 @@
 * alloc_grid - returns pointer to 2 D array of numbers
 *@width:the width of the matrix
 *@height:the height of the matrix
+*Return:pointer
 */
 
 int **alloc_grid(int width, int height)
