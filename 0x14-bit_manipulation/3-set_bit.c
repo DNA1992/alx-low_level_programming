@@ -3,7 +3,7 @@
 *set_bit - fill mem with constant char
 *@n:pointer size
 *@index:ok
-*Return:int 
+*Return:int
 */
 int set_bit(unsigned long int *n, unsigned int index)
 {
