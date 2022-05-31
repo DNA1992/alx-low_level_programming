@@ -4,7 +4,7 @@
 *@n: number to convert
 *Return: nil
 */
-unsigned int binary_to_uint(const char *b)
+void print_binary(unsigned long int n)
 {
 	if (n > 1)
 		print_binary(n >> 1);
