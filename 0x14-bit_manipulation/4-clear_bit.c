@@ -1,6 +1,6 @@
 #include "main.h"
 /**
-*clear_bit: program to clear bit of number to zero
+*clear_bit - program to clear bit of number to zero
 *@n:pointer size
 *@index:index
 *Return: integer
