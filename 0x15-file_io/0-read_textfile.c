@@ -7,36 +7,36 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	void *alpha;
+	void *buffer;
 	int pd = 0;
-	ssize_t lettercont = 0, x = 0;
+	ssize_t lettercompa = 0, x = 0;
 
-	if (filename == '\0')
+	if (filename == NULL)
 		return (0);
 
-	pd = open(filename, O_RDONLY, 0700);
-	if (pd < 0)
+	pd = open(filename, O_RDONLY, 0600);
+	if (pd == -1)
 		return (0);
 
-	alpha = malloc(letters);
-	if (alpha == '\0')
+	buffer = malloc(letters);
+	if (buffer == NULL)
 		return (0);
 
-	lettercont = read(pd, alpha, letters)
-		if (lettercont < 0)
+	lettercont = read(pd, buffer, letters)
+		if (lettercompa == -1)
 		{
-			free(alpha);
+			free(buffer);
 			close(pd);
 			return (0);
 		}
-	x = write(STDOUT_FILENO, alpha, lettercont);
-	if (x < 0 || x != lettercont)
+	x = write(STDOUT_FILENO, buffer, lettercompa);
+	if (x == -1 || x != lettercompa)
 	{
-		free(alpha);
+		free(buffer);
 		close(pd);
 		return (0);
 	}
-	free(alpha);
+	free(buffer);
 	close(pd);
 	return (0);
 }
