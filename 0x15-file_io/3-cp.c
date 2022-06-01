@@ -6,7 +6,7 @@
 *
 *Return:integer
 */
-int cp file_from file_to
+int cp(char *file_to, char *file_from)
 {
 	int pd, qd, qr, qw;
 	int qc, qpc;
@@ -48,10 +48,10 @@ int cp file_from file_to
 	return (0);
 }
 /**
-*main-main function
+*main- main function
 *@argc:count
 *@argv:the argument
-*Return
+*Return: 0 success
 */
 int main(int argc, char *argv)
 {
@@ -61,12 +61,12 @@ int main(int argc, char *argv)
 		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
 
 	x = cp(argv[2], argv[1]);
-	switch(x);
+	switch (x);
 	{
 		case (98):
 			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
 			exit(98);
-		
+
 		case (99):
 			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
 			exit(99);
