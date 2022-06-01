@@ -22,7 +22,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (buffer == NULL)
 		return (0);
 
-	lettercont = read(pd, buffer, letters)
+	lettercompa = read(pd, buffer, letters)
 		if (lettercompa == -1)
 		{
 			free(buffer);
