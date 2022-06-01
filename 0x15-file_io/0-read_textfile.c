@@ -7,15 +7,15 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	int pd = 0;
+	int fd = 0;
 	ssize_t lettercompa = 0, x = 0;
 	void *buffer;
 
 	if (filename == NULL)
 		return (0);
 
-	pd = open(filename, O_RDONLY, 0600);
-	if (pd == -1)
+	fd = open(filename, O_RDONLY, 0600);
+	if (fd == -1)
 		return (0);
 
 	buffer = malloc(letters);
@@ -26,7 +26,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 		if (lettercompa == -1)
 		{
 			free(buffer);
-			close(pd);
+			close(fd);
 			return (0);
 		}
 
@@ -34,10 +34,10 @@ ssize_t read_textfile(const char *filename, size_t letters)
 	if (x == -1 || x != lettercompa)
 	{
 		free(buffer);
-		close(pd);
+		close(fd);
 		return (0);
 	}
 	free(buffer);
-	close(pd);
+	close(fd);
 	return (x);
 }
