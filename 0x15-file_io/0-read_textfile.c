@@ -7,9 +7,9 @@
 */
 ssize_t read_textfile(const char *filename, size_t letters)
 {
-	void *buffer;
 	int pd = 0;
 	ssize_t lettercompa = 0, x = 0;
+	void *buffer;
 
 	if (filename == NULL)
 		return (0);
@@ -29,6 +29,7 @@ ssize_t read_textfile(const char *filename, size_t letters)
 			close(pd);
 			return (0);
 		}
+
 	x = write(STDOUT_FILENO, buffer, lettercompa);
 	if (x == -1 || x != lettercompa)
 	{
