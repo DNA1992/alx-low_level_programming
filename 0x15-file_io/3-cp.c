@@ -56,7 +56,7 @@ int main(int argc, char **argv)
 	if (fdt == -1)
 		prog_to(file_to);
 
-	for (rdt = read(fde, buffer, 1024); rdt > 0; rdt = read(fdt, buffer, 1024))
+	for (rdt = read(fde, buffer, 1024); rdt > 0; rdt = read(fde, buffer, 1024))
 	{
 		wrt = write(fdt, buffer, rdt);
 		if (wrt == -1)
