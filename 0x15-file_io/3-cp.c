@@ -35,7 +35,7 @@ void prog_fd(char *file)
 *@argv:index
 *Return:int
 */
-int main(int argc, char argv)
+int main(int argc, char **argv)
 {
 	int fde = 0, fdt = 0, rdt = 0, wrt = 0;
 	char *file_from, *file_to, buffer[1024];
