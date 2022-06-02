@@ -55,7 +55,7 @@ int main(int argc, char argv)
 	fdt = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
 	if (fdt == -1)
 		prog_to(file_to);
-	
+
 	for (rdt = read(fde, buffer, 1024); rdt > 0; rdt = read(fdt, buffer, 1024))
 	{
 		wrt = write(fdt, buffer, rdt);
