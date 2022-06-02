@@ -1,79 +1,76 @@
 #include "main.h"
 /**
-*cp-copies file from a source to destination
-*@file_to:destination file
-*@file_from:destination
-*
-*Return:integer
+*prog_from-fills memory
+*@file_from:is a pointer size
+*Return:an integer
 */
-int cp(char *file_to, char *file_from)
+void prog_from(char *file_from)
 {
-	int pd, qd, qr, qw;
-	int qc, qpc;
-	char *buffer[1024];
-
-	qc = open(file_from, O_RDONLY);
-	if (qc < 0)
-		return (98);
-
-	pd = open(file_to, O_CREAT | O_WRONLY | O_TRUNC, 0664);
-	if (pd < 0)
-		return (99);
-
-	qr = read(qd, buffer, 1024);
-	if (qr < 0)
-		return (98);
-
-	while (qr > 0)
-	{
-		qw = write(pd, buffer, qr);
-		if (qw < 0)
-			return (99);
-		qr = read(qd, buffer, 1024);
-		if (qr < 0)
-			return (98);
-	}
-	qc = close(qd);
-	if (qc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: can't close qd %d\n", qc);
-		return (100);
-	}
-	qpc = close(qd);
-	if (qpc < 0)
-	{
-		dprintf(STDERR_FILENO, "Error: can't close qd %d\n", qpc);
-		return (100);
-	}
-	return (0);
+	dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", file_from);
+	exit(98);
 }
 /**
-*main- main function
-*@argc:count
-*@argv:the argument
-*Return: 0 success
+*prog_to-fills memory
+*@file_to: size of pointer
+*Return:integer
 */
-int main(int argc, char *argv)
+void prog_to(char *file_to)
 {
-	int x;
+	dprintf(STDERR_FILENO, "Error: Can't write to %s\n", file_to);
+	exit(99);
+}
+/**
+*prog_fd-fills memory
+*@file:pointer size
+*Return:integer
+*/
+void prog_fd(char *file)
+{
+	dprintf(STDERR_FILENO, "Error: Can't close fd %s\n", file);
+	exit(100);
+}
+/**
+*main-fills memory
+*@argc:pointer size
+*@argv:index
+*Return:int
+*/
+int main(int argc, char argv)
+{
+	int fde = 0, fdt = 0, rdt = 0, wrt = 0;
+	char *file_from, *file_to, buffer[1024];
 
 	if (argc != 3)
-		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n"), exit(97);
-
-	x = cp(argv[2], argv[1]);
-	switch (x);
 	{
-		case (98):
-			dprintf(STDERR_FILENO, "Error: Can't read from file %s\n", argv[1]);
-			exit(98);
-
-		case (99):
-			dprintf(STDERR_FILENO, "Error: Can't write to %s\n", argv[2]);
-			exit(99);
-
-		case (100):
-			exit(100);
-		default:
-			return (0);
+		dprintf(STDERR_FILENO, "Usage: cp file_from file_to\n");
+		exit(97);
 	}
+	file_from = argv[1];
+	file_to = argv[2];
+
+	fde = open(file_from, O_RDONLY);
+	if (fde == -1)
+		prog_from(file_from);
+
+	fdt = open(file_to, O_WRONLY | O_CREAT | O_TRUNC, 0664);
+	if (fdt == -1)
+		prog_to(file_to);
+	
+	for (rdt = read(fde, buffer, 1024); rdt > 0; rdt = read(fdt, buffer, 1024))
+	{
+		wrt = write(fdt, buffer, rdt);
+		if (wrt == -1)
+			prog_to(file_to);
+	}
+
+	if (rdt == -1)
+		prog_from(file_from);
+
+	if (close(fde) == -1)
+		prog_fd(file_from);
+
+	if (close(fdt) == -1)
+		prog_fd(file_to);
+
+	return (0);
 }
