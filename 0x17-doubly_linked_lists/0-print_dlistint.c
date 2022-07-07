@@ -10,7 +10,7 @@ size_t print_dlistint(const dlistint_t *h)
 	size_t x = 0;
 	int iniprint = 0;
 
-	for (x = 0; h != NULL; i++)
+	for (x = 0; h != NULL; x++)
 	{
 		if (h->prev != NULL && iniprint == 0)
 		{
@@ -26,5 +26,6 @@ size_t print_dlistint(const dlistint_t *h)
 		h = h->next;
 
 	}
-	return (x);
+
+	return (x)
 }
